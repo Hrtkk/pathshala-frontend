@@ -4,6 +4,7 @@ COPY package.json .
 RUN npm install
 COPY . .
 CMD npm run build
+RUN ls
 
 FROM nginx
 EXPOSE 80
