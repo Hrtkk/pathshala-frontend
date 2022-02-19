@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install: 
-  - docker build -t eagle732/pathshala-frontend -f Dockerfile.dev .
+  - docker build -t eagle732/pathshala-frontend -f Dockerfile .
 
 script: 
   - docker run -e CI=true eagle732/pathshala-frontend npm run test -- --coverage
